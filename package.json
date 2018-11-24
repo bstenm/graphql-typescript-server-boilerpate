@@ -2,23 +2,32 @@
   "name": "flatten",
   "version": "1.0.0",
   "description": "Scripts to flatten and array of any depth",
-  "repository": "github.com:bstenm/flatten.git",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bstenm/flatten"
+  },
+  "main": "src/index.js",
   "scripts": {
-    "start": "NODE_ENV=development nodemon --exec ts-node index.ts",
+    "build": "tsc",
+    "start": "NODE_ENV=development nodemon --exec ts-node src/index.ts",
     "pretest": "yarn lint",
-    "lint": "tslint -c tslint.json '*.ts'",
-    "test": "jest"
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "jest --watch",
+    "gen-schema-types": "gql2ts src/schema.graphql -o src/types/schema.d.ts"
   },
   "author": "Bertrand Steinmetz",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "23.3.9",
+    "@types/lodash": "4.14.118",
     "jest": "23.6.0",
     "nodemon": "1.18.6",
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
     "typescript": "3.1.6"
+  },
+  "dependencies": {
+    "lodash": "4.17.11"
   }
 }

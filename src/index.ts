@@ -1,11 +1,23 @@
 import { flattenDeep } from "lodash";
 import { flattenWithForOfLoop, flattenWithReduce } from "./flattenLibs";
 
-const genRandomNbBetween = (from, to) => {
+/**
+ * Returns a number between 1st arguments and (but not including) the 2nd arguments
+ * @param from - the lowest number possible
+ * @param to - the highest number possible + 1
+ * @return - the random number
+ */
+const genRandomNbBetween = (from: number, to: number): number => {
       return Math.floor(Math.random() * to) + from;
 };
 
-const generateArray = (maxSize, depth) => {
+/**
+ * Generates a nested array of random numbers between 0 and 100
+ * @param maxSize - the maximum length of any nested array generated
+ * @param depth - the maximum depth of the resulting array
+ * @return - the rsulting nested array
+ */
+const generateArray = (maxSize: number, depth: number): any[] => {
       const size = genRandomNbBetween(1, maxSize);
       return Array.from(Array(maxSize), () => {
             // 75% chance of being nested
