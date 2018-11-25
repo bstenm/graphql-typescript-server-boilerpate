@@ -4,9 +4,9 @@
             "module": "commonjs",
             "outDir": "dist",
             "esModuleInterop": true,
-            "noImplicitAny": true,
             "moduleResolution": "node",
-            "sourceMap": true
+            "sourceMap": true,
+            "lib": [ "es6", "es2017", "esnext.asynciterable"],
       },
       "include": [
             "./src/**/*.ts"
