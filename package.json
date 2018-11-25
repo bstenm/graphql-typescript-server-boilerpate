@@ -6,6 +6,8 @@
     "type": "git",
     "url": "https://github.com/bstenm/flatten"
   },
+  "author": "Bertrand Steinmetz",
+  "license": "ISC",
   "main": "src/server.ts",
   "scripts": {
     "build": "tsc",
@@ -17,8 +19,6 @@
     "test": "NODE_ENV=test jest",
     "test:watch": "yarn test --watch"
   },
-  "author": "Bertrand Steinmetz",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "23.3.9",
     "@types/lodash": "4.14.118",
@@ -34,5 +34,16 @@
     "concurrently": "4.1.0",
     "graphql-yoga": "1.16.7",
     "lodash": "4.17.11"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "git add"
+    ]
+  },
 }
