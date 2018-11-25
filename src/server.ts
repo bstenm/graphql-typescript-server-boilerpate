@@ -13,6 +13,9 @@ const resolvers = {
                   jsonArray: string;
             }) => {
                   const array = JSON.parse(jsonArray);
+                  if (! Array.isArray(array)) {
+                        throw new Error('Not an array');
+                  }
                   return flattenWithReduce(array)
             },
       },
