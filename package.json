@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/jest": "23.3.9",
     "@types/lodash": "4.14.118",
+    "graphql-request": "1.8.2",
     "jest": "23.6.0",
     "nodemon": "1.18.6",
     "ts-jest": "23.10.5",

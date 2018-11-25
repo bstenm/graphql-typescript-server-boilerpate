@@ -1,22 +1,27 @@
 import { GraphQLServer } from "graphql-yoga";
-import { flattenWithReduce } from './flattenLibs';
+import { flattenWithReduce } from "./flattenLibs";
 
 const typeDefs = `
       type Query {
-            flatten(jsonArray: String!): [Int]!
+            flatten(input: String!): [Int]!
       }
 `;
 
 const resolvers = {
       Query: {
-            flatten: (_: any, { jsonArray }: {
-                  jsonArray: string;
+            flatten: (_: any, { input }: {
+                  input: string,
             }) => {
-                  const array = JSON.parse(jsonArray);
-                  if (! Array.isArray(array)) {
-                        throw new Error('Not an array');
+                  let array: any[];
+                  try {
+                        array = JSON.parse(input);
+                  } catch (e) {
+                        throw new Error(`Invalid json (${input}): Expects a stringified array`);
                   }
-                  return flattenWithReduce(array)
+                  if (! Array.isArray(array)) {
+                        throw new Error("Invalid input: Expects a stringified array");
+                  }
+                  return flattenWithReduce(array);
             },
       },
 };
