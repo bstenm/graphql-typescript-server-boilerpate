@@ -42,7 +42,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "yarn lint",
+      "yarn test",
       "git add"
     ]
   },
