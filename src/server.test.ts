@@ -1,7 +1,7 @@
 // Integration tests that require the server to be running on localhost:4000
 import { request } from "graphql-request";
 
-const host: string = `http://127.0.0.1:4000`;
+const host: string = "http://127.0.0.1:4000";
 
 it("Returns a non-nested array unchanged", async () => {
       const query = "query { flatten (input:\"[2,3, 5, 8,4]\")}";
@@ -21,7 +21,7 @@ it("Returns an error if input is not a valid json", async () => {
             await request(host, query);
       } catch ({ response }) {
             const { message } = response.errors[0];
-            expect(message).toContain('Invalid json');
+            expect(message).toContain("Invalid json");
       }
 });
 
@@ -31,7 +31,6 @@ it("Returns an error if input is not a stringified array", async () => {
             await request(host, query);
       } catch ({ response }) {
             const { message } = response.errors[0];
-            expect(message).toContain('Invalid input');
+            expect(message).toContain("Invalid input");
       }
 });
-
