@@ -1,7 +1,12 @@
-// Integration tests that require the server to be running on localhost:4000
 import { request } from "graphql-request";
+import { port } from "./config";
+import server from "./server";
 
-const host: string = "http://127.0.0.1:4000";
+const host: string = `http://127.0.0.1:${port}`;
+
+beforeAll(async () => {
+      await server.start({ port });
+});
 
 it("Returns a non-nested array unchanged", async () => {
       const query = "query { flatten (input:\"[2,3, 5, 8,4]\")}";

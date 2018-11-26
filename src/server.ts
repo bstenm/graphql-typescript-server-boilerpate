@@ -26,8 +26,4 @@ const resolvers = {
       },
 };
 
-const server = new GraphQLServer({ typeDefs, resolvers });
-
-server.start(() => {
-      console.log("Server is running on port:4000");
-});
+export default new GraphQLServer({ typeDefs, resolvers });
