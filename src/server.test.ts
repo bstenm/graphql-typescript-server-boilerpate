@@ -1,3 +1,5 @@
+// Integration tests
+
 import { request } from "graphql-request";
 import { port } from "./config";
 import server from "./server";
