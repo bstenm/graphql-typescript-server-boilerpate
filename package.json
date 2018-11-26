@@ -8,11 +8,11 @@
   },
   "author": "Bertrand Steinmetz",
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "watch-ts": "tsc -w",
-    "postinstall": "yarn build",
+    "postinstall": "npm run build",
     "start": "node dist/index.js",
     "watch-node": "NODE_ENV=development nodemon dist/index.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
@@ -24,7 +24,6 @@
   "devDependencies": {
     "@types/jest": "23.3.9",
     "@types/lodash": "4.14.118",
-    "easygraphql-tester": "1.0.14",
     "graphql-request": "1.8.2",
     "husky": "1.2.0",
     "jest": "23.6.0",
@@ -33,10 +32,10 @@
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
-    "typescript": "3.1.6"
+    "typescript": "3.1.6",
+    "concurrently": "4.1.0"
   },
   "dependencies": {
-    "concurrently": "4.1.0",
     "graphql-yoga": "1.16.7",
     "lodash": "4.17.11"
   },
