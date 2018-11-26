@@ -1,1 +1,1 @@
-export const port: number = process.env.NODE === "test" ? 5000 : 8080;
+export const port: string = process.env.PORT || (process.env.NODE === "test" ? "5000" : "4000");
