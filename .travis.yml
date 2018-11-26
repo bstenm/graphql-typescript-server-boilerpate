@@ -7,3 +7,7 @@ cache:
 script:
       - yarn test
       - yarn build
+deploy:
+      provider: heroku
+      api_key:
+            secure: "0a01819a-cfae-4c2d-ba3b-b388714a4939"
