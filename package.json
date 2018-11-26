@@ -12,14 +12,14 @@
   "scripts": {
     "build": "tsc",
     "watch-ts": "tsc -w",
-    "postinstall": "npm run build",
-    "start": "NODE_ENV=production node dist/index.js",
     "watch-node": "NODE_ENV=development nodemon dist/index.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
-    "pretest": "yarn lint",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "pretest": "yarn lint",
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "start": "NODE_ENV=production node dist/index.js",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
