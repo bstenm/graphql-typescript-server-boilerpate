@@ -16,10 +16,10 @@ const resolvers = {
                   try {
                         array = JSON.parse(input);
                   } catch (e) {
-                        throw new Error(`Invalid json (${input}): The input received was mal-formed`);
+                        throw new Error(`Invalid json (${input}): The input received was mal-formed.`);
                   }
                   if (! Array.isArray(array)) {
-                        throw new Error("Invalid input: Expects a stringified array as input");
+                        throw new Error("Invalid input: Expects a stringified array as input.");
                   }
                   return flattenWithReduce(array);
             },
