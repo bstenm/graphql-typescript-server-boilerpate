@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-      - 8
+- 8
 cache:
-      directories:
-            - node_modules
+  directories:
+  - node_modules
 script:
-      - yarn test
-      - yarn build
+- yarn test
+- yarn build
 deploy:
-      provider: heroku
-      api_key:
-            secure: "0a01819a-cfae-4c2d-ba3b-b388714a4939"
+  provider: heroku
+  api_key:
+    secure: ZzBN7Vw9U6/24GeCw32y2Qw9vVlNPcciqeTwEM5uE7JunYCTovnZHIQvJD4d4t11UTBTDPHrx+dQRFgJ36NKzIbX7cg2MjcEgxvQACrcgtpBhYePuwSXGTjpG/O6QyieeaH25HqiVA2yYuzShC6IwlN3dLMk6DwTy7j3RCDYg0AH5XXXXXy21ZrOLGTSMn+JWwzfsIxRuBmNwYPuUy7nRQ7axt1ZK8SpHtBqXBIdtAs79EkU2piG/Cri+tdyns+3p6Fu7p6E3MWiGsJA5L2EVjzwCtj6x+yFsthfU0v7jbSsCq4krMdQ+MEm9RLOdQnilOgek4BtqI6cLGy4W905AwkSzZ2tREQIoIMbPC8IdHTGFSCo2KcdFphQ5px+rWTKqLbtmryictVTWWYVVQyuyKKsMkNkDRqBHBxd5DDWj3gYIwD/7eqamicIqGxR1ZIQ66GpIfP4FYQSLVZVZNGsf1Gz0PlX47t5GDBzL+oWgi1XmrwfRoV4Y6AZ35qTu+06w10uFG61ebGJU9FfTrdy06dXMKEdmeMP6symwHE1hU1OFE/F8uVtHBQ0VWSw6SeJwGJrXpWTTFIl8h/WcXKBVtz5STChrxxMAhQ1Ggh46S9lyQ/60ehWHXkOQT1j6KKSNPcesMYELQhDwElQqO+sIz0O/xWqvX+V3ogtJE0DTsk=
