@@ -8,4 +8,8 @@ A GraphQL api to flatten an array of any depth as a service.
 test with curl:
  curl -XPOST -H 'Content-Type:application/graphql'  -d '{ flatten(input: "[3, 4, [[5]]]") }' https://flatten-api-production.herokuapp.com
 
- deploy to staging and production
+### Travis
+
+- Run the tests
+- Run the build process
+- Deploy to the Heroku staging and production sites
