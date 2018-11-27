@@ -16,7 +16,7 @@ const resolvers = {
                   try {
                         array = JSON.parse(input);
                   } catch (e) {
-                        throw new Error(`Invalid json (${input}): Expects a stringified array`);
+                        throw new Error(`Invalid json (${input}): Expects a stringified array as input`);
                   }
                   if (! Array.isArray(array)) {
                         throw new Error("Invalid input: Expects a stringified array as input");
