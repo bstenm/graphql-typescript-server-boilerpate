@@ -1,5 +1,5 @@
 
-# Flatten Api:
+# Flatten Api
 
 A GraphQL api to flatten an array of any depth as a service.
 
