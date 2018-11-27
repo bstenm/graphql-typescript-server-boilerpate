@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bstenm/flatten.svg?branch=master)](https://travis-ci.org/bstenm/flatten)
+
 # Flatten: GraphQL + Typescript demo
 
 GraphQL api to flatten an array of any depth
