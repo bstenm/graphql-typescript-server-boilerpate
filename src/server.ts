@@ -19,7 +19,7 @@ const resolvers = {
                         throw new Error(`Invalid json (${input}): Expects a stringified array`);
                   }
                   if (! Array.isArray(array)) {
-                        throw new Error("Invalid input: Expects a stringified array");
+                        throw new Error("Invalid input: Expects a stringified array as input");
                   }
                   return flattenWithReduce(array);
             },
