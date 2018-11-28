@@ -17,4 +17,4 @@ deploy:
 before_install:
   - 'yarn add global coveralls'
 script:
-  - jest --coverage --coverageReporters=text-lcov | coveralls
+  - jest --coverage --coverageReporters=text-lcov --forceExit | coveralls
