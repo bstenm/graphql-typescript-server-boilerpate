@@ -17,4 +17,4 @@ deploy:
 before_install:
   - 'yarn add global coveralls'
 after_success:
-  - 'if [[ "$(node --version)" == v8.* && -s coverage/lcov.info ]]; then cat coverage/lcov.info | coveralls; fi'
+  - 'cat coverage/lcov.info | coveralls'
