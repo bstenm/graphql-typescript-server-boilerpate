@@ -9,7 +9,7 @@ cache:
 before_install:
   - 'yarn add global coveralls'
 
-script:
+after_deploy:
   - yarn build
 
 after_success:
