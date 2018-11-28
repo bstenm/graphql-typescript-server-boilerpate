@@ -13,3 +13,5 @@ test with curl:
 - Run the tests
 - Run the build process
 - Deploy to the Heroku staging and production sites
+
+snyk
