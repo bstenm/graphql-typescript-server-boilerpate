@@ -14,4 +14,4 @@ test with curl:
 - Run the build process
 - Deploy to the Heroku staging and production sites
 
-snyk
+I had to fork graphql-yoga snyk
