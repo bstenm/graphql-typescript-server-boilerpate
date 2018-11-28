@@ -17,7 +17,7 @@
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "pretest": "yarn lint",
-    "test": "NODE_ENV=test jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "yarn test --watch",
     "start": "NODE_ENV=production node dist/index.js",
     "postinstall": "yarn build"
