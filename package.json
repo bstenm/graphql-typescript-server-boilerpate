@@ -19,8 +19,7 @@
     "pretest": "yarn lint",
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "yarn test --watch",
-    "start": "NODE_ENV=production node dist/index.js",
-    "postinstall": "yarn build"
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
