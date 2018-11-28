@@ -10,8 +10,10 @@ before_install:
   - 'yarn add global coveralls'
 
 script:
-  - jest --coverage --coverageReporters=text-lcov --forceExit | coveralls
   - yarn build
+
+after_success:
+  - jest --coverage --coverageReporters=text-lcov --forceExit | coveralls
 
 deploy:
   provider: heroku
