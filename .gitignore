@@ -1,6 +1,5 @@
 .vscode/
 coverage/
-.coveralls.yml
 node_modules/
 dist/
 yarn-error.log
