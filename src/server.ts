@@ -1,4 +1,4 @@
-import { GraphQLServer } from "graphql-yoga";
+import { GraphQLServer } from "safe-graphql-yoga";
 import { flattenWithReduce } from "./flattenLibs";
 
 const typeDefs = `
