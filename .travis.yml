@@ -9,7 +9,7 @@ cache:
 before_install:
   - 'yarn add global coveralls'
 
-script:
+after_install:
   - jest --coverage --coverageReporters=text-lcov --forceExit | coveralls
   - yarn build
 
