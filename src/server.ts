@@ -3,7 +3,7 @@ import { flattenWithReduce } from "./flattenLibs";
 
 const typeDefs = `
       type Query {
-            flatten(input: String!): [Int]!
+            flatten(input: String!): String!
       }
 `;
 
@@ -21,7 +21,7 @@ const resolvers = {
                   if (! Array.isArray(array)) {
                         throw new Error("Invalid input: Expects a stringified array as input.");
                   }
-                  return flattenWithReduce(array);
+                  return JSON.stringify(flattenWithReduce(array));
             },
       },
 };

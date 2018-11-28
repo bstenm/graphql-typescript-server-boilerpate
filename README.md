@@ -1,4 +1,4 @@
-
+Add pm2 , node inspect , ts prettier
 # Flatten Api
 
 A GraphQL api to flatten an array of any depth as a service.
@@ -7,6 +7,8 @@ A GraphQL api to flatten an array of any depth as a service.
 
 test with curl:
  curl -XPOST -H 'Content-Type:application/graphql'  -d '{ flatten(input: "[3, 4, [[5]]]") }' https://flatten-api-staging.herokuapp.com
+
+Caution: Even though the methods can flatten an array of mixed types (see unit tests) the grahql server expects integers
 
 ### Travis
 
