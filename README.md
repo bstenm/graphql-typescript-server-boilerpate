@@ -1,4 +1,4 @@
-Add pm2 , node inspect , ts prettier
+Add pm2 , node inspect , ts prettier, security: lusca
 # Flatten Api
 
 A GraphQL api to flatten an array of any depth as a service.
