@@ -28,7 +28,7 @@ Travis CI will:
 - Run the build process
 - Deploy to the Heroku staging and production sites
 
-See result in action:
+See result in action (flattens an array of any depth):
 ```
 > curl -XPOST -H 'Content-Type:application/graphql'  -d '{ flatten(input: "[3, 4, [[5]]]") }' https://flatten-api-staging.herokuapp.com
 ```
