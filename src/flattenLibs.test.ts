@@ -1,13 +1,8 @@
-import {
-      flattenWithForEachLoop,
-      flattenWithForLoop,
-      flattenWithForOfLoop,
-      flattenWithReduce,
-} from "./flattenLibs";
+import { flattenWithForOfLoop, flattenWithReduce } from "./flattenLibs";
 
 const array1 = [2, 3, 4, "string1", 6];
 const array2 = [[86, [41, [[31, "string1", [[53, 66], 80]], [13, [5, [[[59]], 69, { a: "b" }]]], 25, [95, 40, 83]]]]];
-const array2Flattened = [86, 41, 31, "string1", 53, 66, 80, 13, 5, 59, 69, { a: "b" }, 25, 95, 40, 83 ];
+const array2Flattened = [86, 41, 31, "string1", 53, 66, 80, 13, 5, 59, 69, { a: "b" }, 25, 95, 40, 83];
 
 describe("flattenWithReduce", () => {
       it("Returns a non-nested array unchanged", () => {
@@ -29,30 +24,6 @@ describe("flattenWithForOfLoop", () => {
 
       it("Flattens an array of any depth with for-of loop", () => {
             const flattened = flattenWithForOfLoop(array2);
-            expect(flattened).toEqual(array2Flattened);
-      });
-});
-
-describe("flattenWithForEachLoop", () => {
-      it("Returns a non-nested array unchanged", () => {
-            const flattened = flattenWithForEachLoop(array1);
-            expect(flattened).toEqual([2, 3, 4, "string1", 6]);
-      });
-
-      it("Flattens an array of any depth with for-each", () => {
-            const flattened = flattenWithForEachLoop(array2);
-            expect(flattened).toEqual(array2Flattened);
-      });
-});
-
-describe("flattenWithForLoop", () => {
-      it("Returns a non-nested array unchanged", () => {
-            const flattened = flattenWithForLoop(array1);
-            expect(flattened).toEqual([2, 3, 4, "string1", 6]);
-      });
-
-      it("Flattens an array of any depth with regular for loop", () => {
-            const flattened = flattenWithForLoop(array2);
             expect(flattened).toEqual(array2Flattened);
       });
 });
