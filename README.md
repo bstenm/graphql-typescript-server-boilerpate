@@ -9,7 +9,7 @@ Uses [TravisCI](https://travis-ci.org/bstenm/graphql-typescript-server-boilerpat
 
 Launch the server in development mode, it processes Typescript and lints your code on save:
 ```
-> yarn watch
+> yarn watch n
 ```
 
 #### Testing
