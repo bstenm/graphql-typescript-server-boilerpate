@@ -13,8 +13,8 @@
     "build": "yarn build-ts && yarn lint",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "watch-node": "pm2-dev start ecosystem.config.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"yarn watch-ts\" \"yarn watch-node\"",
+    "watch-node": "NODE_ENV=development nodemon dist/index.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "pretest": "yarn lint",
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
@@ -39,7 +39,6 @@
   "dependencies": {
     "coveralls": "3.0.2",
     "lodash": "4.17.11",
-    "pm2": "3.2.2",
     "safe-graphql-yoga": "0.0.0-semantic-release"
   },
   "husky": {
