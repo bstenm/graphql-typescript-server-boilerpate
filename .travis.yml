@@ -8,6 +8,7 @@ cache:
 
 install:
   - 'yarn add coveralls'
+  - snyk test
 
 script:
   - jest --coverage --coverageReporters=text-lcov --detectOpenHandles --forceExit | coveralls
