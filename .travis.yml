@@ -4,13 +4,13 @@ node_js:
 
 cache:
   directories:
-  - node_modules
+    - node_modules
 
 env:
-  - SNYK_TOKEN=5c5793e2-9265-4520-a869-1b994b884d50
+  secure: oZ8fih46AQl5kY0Rxk/wmA3fBS2rZwyJmlBZQmOk39INWPE6LpgxtNumJnNC1txMXQC7qyZbLDamdxiPrqFh8/js0bIpI1ZolAVnZ2BSPKMtc9Vx9fyLGpHkZVT/Zp/C2e+ouXXrwI+lSwIAcevj9xCx2QnxPxCKFdSt6T6/sQmdZg5jcBrJGdL1j1tHtyLB6Ugk6lc3S7jVcvCVRazaMyeXnc2+FkxHbFMfdcfUU03aOoaeObKfhcqi7PfjEYkNMFgX097JdtA/pdiaAaiSMlI6rYDc5Oo1S82SK4a3FcJ3m3PoeRJslh/orN5QPFTHMu4NcOPTMWnXHcFzk9970ap04U6/EjdfzYH/57+HvuZpIHdKLuAKsT+teJIYCqZ7v0aY79wpDeJivZCCw9rQs0kAwgc8zx4xY7sWKq6Uw9rxKI6RG+Ut0JiU+a4XDLYYS51pBA07p/CEp+n80WvIbLhCBJpsNJeFe5a0I5C+J+yC2BhfVkG6e3Agn1PkrF43HVMbyvHOlXaaPQ7sbARMQApyi1xI5zJltC7fmdyAn/OgC6Ug80e5FvZ/wGeTCW+IK6cRvSsv3QhPnmMWHxMe3zzL8a8mp6QiVgQjr11/PYNhp2aQvigJzMPlDoOlI/6sv+KD4FQV0hbItaluXZtRLPRHdOvFWsK5TXFGcd28mtg=
 
 install:
-  - 'yarn add coveralls snyk'
+  - yarn add coveralls snyk
   - snyk test
 
 script:

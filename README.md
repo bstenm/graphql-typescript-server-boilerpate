@@ -24,6 +24,7 @@ Lints your code and runs the tests with jest on save:
 On every push your code will first be linted, then Travis will take over.
 
 Travis CI will:
+- Check for vulnerabilities
 - Run the tests
 - Run the build process
 - Deploy to the Heroku staging and production sites
