@@ -28,3 +28,10 @@ deploy:
 
 after_deploy:
   - snyk monitor
+
+notifications:
+      email:
+            recipients:
+                  - email@address.com
+            on_success: change
+            on_failure: change
