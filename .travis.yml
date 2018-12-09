@@ -6,6 +6,9 @@ cache:
   directories:
   - node_modules
 
+env:
+  - SNYK_TOKEN=5c5793e2-9265-4520-a869-1b994b884d50
+
 install:
   - 'yarn add coveralls snyk'
   - snyk test
