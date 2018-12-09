@@ -7,7 +7,7 @@ cache:
   - node_modules
 
 install:
-  - 'yarn add coveralls'
+  - 'yarn add coveralls snyk'
   - snyk test
 
 script:
