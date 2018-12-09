@@ -7,7 +7,7 @@
     "jsRules": {},
     "rules": {
         "no-console": false,
-        "prefer-for-of": false
+        "trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
     },
     "rulesDirectory": []
 }
