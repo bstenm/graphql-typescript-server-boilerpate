@@ -20,7 +20,8 @@
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "yarn test --watch",
     "start": "NODE_ENV=production node dist/index.js",
-    "postinstall": "yarn build"
+    "postinstall": "yarn build",
+    "prepublish": "snyk protect"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",

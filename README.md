@@ -40,7 +40,7 @@ Travis CI will:
 - Run the tests
 - Run the build process
 - Deploy to the Heroku staging and production sites
-- Take a snpshot of your application dependencies for Snyk to alert you in case of any newly found vulnerabilities
+- Take a snapshot of your application dependencies for Snyk to alert you in case of any newly found vulnerabilities
 
 See result in action (flattens an array of any depth):
 ```

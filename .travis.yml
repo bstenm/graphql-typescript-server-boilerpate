@@ -11,7 +11,6 @@ env:
 
 install:
   - yarn add coveralls
-  - snyk protect
   - snyk test
 
 script:
