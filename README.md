@@ -19,15 +19,28 @@ Lints your code and runs the tests with jest on save:
 > yarn test
 ```
 
-#### Deployment
+#### Continuous Integration
 
 On every push your code will first be linted, then Travis will take over.
+
+For Travis to be able to run the Snyk commands it needs to know your secret snyk API token. The following command will encrypt and paste it into the appropriate Travis config:
+
+```
+> travis encrypt SNYK_TOKEN=<YOUR SNYK API TOKEN> --add env
+```
+
+For Travis to be able to deploy to Heroku, it needs to know your Heroku API key. The following command will encrypt and paste it into the appropriate Travis config:
+
+```
+> travis encrypt $(heroku auth:token) --add deploy.api_key
+```
 
 Travis CI will:
 - Check for vulnerabilities
 - Run the tests
 - Run the build process
 - Deploy to the Heroku staging and production sites
+- Take a snpshot of your application dependencies for Snyk to alert you in case of any newly found vulnerabilities
 
 See result in action (flattens an array of any depth):
 ```
