@@ -1,5 +1,5 @@
 import { GraphQLServer } from "safe-graphql-yoga";
-import { flattenWithReduce } from "./flattenLibs";
+import { flattenWithForOfLoop } from "./flattenLibs";
 
 const typeDefs = `
       type Query {
@@ -16,12 +16,12 @@ const resolvers = {
                   try {
                         array = JSON.parse(input);
                   } catch (e) {
-                        throw new Error(`Invalid json (${input}): The input received was mal-formed.`);
+                        throw new Error(`Invalid json (${input}): The INput received was mal-formed.`);
                   }
                   if (! Array.isArray(array)) {
                         throw new Error("Invalid input: Expects a stringified array as input.");
                   }
-                  return JSON.stringify(flattenWithReduce(array));
+                  return JSON.stringify(flattenWithForOfLoop(array));
             },
       },
 };

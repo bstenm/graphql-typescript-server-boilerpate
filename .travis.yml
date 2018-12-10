@@ -16,7 +16,6 @@ install:
 
 script:
   - jest --coverage --coverageReporters=text-lcov --detectOpenHandles --forceExit | coveralls
-  - yarn build
 
 deploy:
   provider: heroku
