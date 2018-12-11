@@ -14,6 +14,7 @@ install:
   # here as it scans dependencies
   - snyk protect
   - snyk test
+  - snyk test --docker graphql-typescript-boilerplate_web --file=Dockerfile
 
 script:
   # send coverage to coveralls (http://coveralls.io/)
@@ -32,6 +33,7 @@ deploy:
 
 after_deploy:
   - snyk monitor
+  - snyk monitor --docker ubuntu:latest
 
 notifications:
       email:
