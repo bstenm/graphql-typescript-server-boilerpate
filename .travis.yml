@@ -15,7 +15,7 @@ install:
   # here as it scans dependencies
   - snyk protect
   - snyk test
-  - snyk test --docker e29edbbb00b9 --file=Dockerfile
+  - snyk test --docker e29edbbb00b9:latest --file=Dockerfile
 
 script:
   # send coverage to coveralls (http://coveralls.io/)
