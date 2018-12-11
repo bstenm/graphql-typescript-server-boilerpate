@@ -20,7 +20,7 @@
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "yarn test --watch",
     "start": "NODE_ENV=production node dist/index.js",
-    "serve-debug": "nodemon --inspect dist/index.js",
+    "serve-debug": "NODE_ENV=development nodemon --inspect dist/index.js",
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn serve-debug\""
   },
   "devDependencies": {
