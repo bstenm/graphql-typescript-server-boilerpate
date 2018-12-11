@@ -15,7 +15,6 @@ install:
   # here as it scans dependencies
   - snyk protect
   - snyk test
-  - snyk test --docker e29edbbb00b9:latest --file=Dockerfile
 
 script:
   # send coverage to coveralls (http://coveralls.io/)
@@ -34,7 +33,6 @@ deploy:
 
 after_deploy:
   - snyk monitor
-  - snyk monitor --docker ubuntu:latest
 
 notifications:
       email:
