@@ -11,7 +11,7 @@ env:
 
 install:
   - yarn add coveralls snyk
-  # here as is scans dependencies
+  # here as it scans dependencies
   - snyk protect
   - snyk test
 
