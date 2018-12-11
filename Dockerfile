@@ -12,4 +12,7 @@ RUN yarn build-ts
 
 EXPOSE 4000
 
+# RUN npm install pm2 -g
+# CMD ["pm2-runtime", "app.js"]
+
 ENTRYPOINT ["node", "dist/"]
