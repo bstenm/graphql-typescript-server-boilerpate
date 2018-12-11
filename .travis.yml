@@ -14,7 +14,7 @@ install:
   # here as it scans dependencies
   - snyk protect
   - snyk test
-  - snyk test --docker graphql-typescript-boilerplate_web --file=Dockerfile
+  - snyk test --docker graphql-typescript-boilerplate_web:latest --file=Dockerfile
 
 script:
   # send coverage to coveralls (http://coveralls.io/)
