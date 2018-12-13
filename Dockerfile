@@ -8,7 +8,9 @@ RUN yarn install
 
 COPY . /usr/app
 
+RUN yarn global add concurrently pm2 typescript
+
 EXPOSE 4000
 
-ENTRYPOINT ["yarn", "watch"]
+CMD concurrently -k -p "[{name}]" -n "TypeScript,Node" "tsc -w" "pm2-dev start pm2.json"
 

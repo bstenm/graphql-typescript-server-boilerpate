@@ -1,0 +1,9 @@
+{
+  "apps" : [{
+    "name": "graphql-typescript-boilerpate",
+    "script": "dist/",
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }]
+}
