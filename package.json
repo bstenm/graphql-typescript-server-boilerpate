@@ -1,10 +1,10 @@
 {
-  "name": "flatten",
+  "name": "graphql-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "Scripts to flatten and array of any depth",
+  "description": "A boilerplate for a graphql server in typescript ",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bstenm/flatten"
+    "url": "https://github.com/bstenm/graphql-typescript-boilerpate"
   },
   "author": "Bertrand Steinmetz",
   "license": "ISC",
@@ -13,15 +13,15 @@
     "build": "yarn build-ts && yarn lint",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "watch-node": "NODE_ENV=development nodemon dist/index.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"yarn watch-ts\" \"yarn watch-node\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "pretest": "yarn lint",
-    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "yarn test --watch",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\"  \"yarn watch-ts\" \"yarn watch-node\"",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn serve-debug\"",
+    "watch-node": "NODE_ENV=development nodemon dist/index.js",
+    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "start": "NODE_ENV=production node dist/index.js",
-    "serve-debug": "NODE_ENV=development nodemon --inspect dist/index.js",
-    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn serve-debug\""
+    "serve-debug": "NODE_ENV=development nodemon --inspect dist/index.js"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
@@ -35,13 +35,14 @@
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
-    "tslint-config-prettier": "1.17.0",
-    "typescript": "3.2.2"
+    "tslint-config-prettier": "1.17.0"
   },
   "dependencies": {
     "coveralls": "3.0.2",
     "lodash": "4.17.11",
-    "safe-graphql-yoga": "0.0.0-semantic-release"
+    "pm2": "3.2.3",
+    "safe-graphql-yoga": "0.0.0-semantic-release",
+    "typescript": "3.2.2"
   },
   "husky": {
     "hooks": {

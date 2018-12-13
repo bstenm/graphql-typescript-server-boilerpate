@@ -1,18 +1,14 @@
 FROM node:8
 
-WORKDIR /app
+WORKDIR /usr/app
 
-COPY package.json yarn.lock /app/
+COPY package.json yarn.lock /usr/app/
 
-RUN yarn install --production
+RUN yarn install
 
-COPY . /app
-
-RUN yarn build-ts
+COPY . /usr/app
 
 EXPOSE 4000
 
-# RUN npm install pm2 -g
-# CMD ["pm2-runtime", "app.js"]
+ENTRYPOINT ["yarn", "watch"]
 
-ENTRYPOINT ["node", "dist/"]

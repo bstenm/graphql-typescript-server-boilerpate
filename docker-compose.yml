@@ -3,5 +3,8 @@ version: "2"
 services:
       web:
             build: .
+            volumes:
+                  #So that rebuilds are no longer necessary when code is changed
+                  - "./:/usr/app"
             ports:
                   - "4000:4000"
