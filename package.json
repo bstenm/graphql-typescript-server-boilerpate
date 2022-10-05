@@ -21,7 +21,9 @@
     "watch-node": "NODE_ENV=development nodemon dist/index.js",
     "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "start": "NODE_ENV=production node dist/index.js",
-    "serve-debug": "NODE_ENV=development nodemon --inspect dist/index.js"
+    "serve-debug": "NODE_ENV=development nodemon --inspect dist/index.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
@@ -39,9 +41,10 @@
   },
   "dependencies": {
     "coveralls": "3.0.2",
-    "lodash": "4.17.11",
+    "lodash": "4.17.21",
     "safe-graphql-yoga": "0.0.0-semantic-release",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "@snyk/protect": "latest"
   },
   "husky": {
     "hooks": {
@@ -53,5 +56,6 @@
       "yarn lint",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
